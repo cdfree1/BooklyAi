@@ -33,7 +33,7 @@ const Camera = ({setImageData}: {setImageData: (data: BookData) => void}) => {
         const imageSrc: String | null | undefined = capture();
         if (imageSrc) {
             console.log(imageSrc);
-            fetch('http://127.0.0.1:8000/classification/classify-book', {
+            fetch('https://booklyai.onrender.com/classification/classify-book', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
