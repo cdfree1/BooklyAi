@@ -38,7 +38,7 @@ async def lifespan(app: FastAPI):
 app: FastAPI = FastAPI(lifespan=lifespan)
 
 origins = [
-    "https://bookly-ai.vercel.app/",
+    "https://bookly-ai.vercel.app",
 ]
 
 app.add_middleware(
