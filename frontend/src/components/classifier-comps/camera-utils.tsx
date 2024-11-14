@@ -21,7 +21,7 @@ const Camera = ({setImageData}: {setImageData: (data: BookData) => void}) => {
 
     const capture = React.useCallback(() => {
         if (webcamRef.current) {
-            const imageSrc = webcamRef.current.getScreenshot();
+            const imageSrc: String | null = webcamRef.current.getScreenshot();
             console.log(imageSrc);
             return imageSrc
         }
