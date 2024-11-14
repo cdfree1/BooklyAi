@@ -1,0 +1,11 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/app/components/camera-comps/index.tsx"],"sourcesContent":["\r\n\r\nimport react, {useState, useRef} from 'react';\r\nimport { Camera } from \"react-camera-pro\";\r\n\r\n\r\nconst Cam = () => {\r\n    const camera : any = useRef(null);\r\n    const [image, setImage] = useState(null);\r\n\r\n    return (\r\n        <div>\r\n            <Camera ref={camera} errorMessages={{}} />\r\n            <button onClick={() => {\r\n                if (camera.current) {\r\n                    const img = camera.current.takePhoto();\r\n                    setImage(img);\r\n                }\r\n            }}>Take photo</button>\r\n\r\n            \r\n        </div>\r\n    )\r\n}\r\n\r\nexport default Cam;"],"names":[],"mappings":";;;;AAEA;AACA;;;;AAGA,MAAM,MAAM;IACR,MAAM,SAAe,CAAA,GAAA,qMAAA,CAAA,SAAM,AAAD,EAAE;IAC5B,MAAM,CAAC,OAAO,SAAS,GAAG,CAAA,GAAA,qMAAA,CAAA,WAAQ,AAAD,EAAE;IAEnC,qBACI,8OAAC;;0BACG,8OAAC,8JAAA,CAAA,SAAM;gBAAC,KAAK;gBAAQ,eAAe,CAAC;;;;;;0BACrC,8OAAC;gBAAO,SAAS;oBACb,IAAI,OAAO,OAAO,EAAE;wBAChB,MAAM,MAAM,OAAO,OAAO,CAAC,SAAS;wBACpC,SAAS;oBACb;gBACJ;0BAAG;;;;;;;;;;;;AAKf;uCAEe"}},
+    {"offset": {"line": 58, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 64, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 68, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 79, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 79, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
