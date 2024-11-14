@@ -6,7 +6,7 @@ import Webcam from "react-webcam";
 const videoConstraints = {
     width: 1080,
     height: 720,
-    facingMode: "user"
+    facingMode: "environment"
 };
 
 interface BookData{
