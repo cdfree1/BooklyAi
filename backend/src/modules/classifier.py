@@ -11,7 +11,7 @@ class ClassifierModule:
     def __init__(self, openai_client: AsyncOpenAI):
         self.openai_client = openai_client
 
-    async def classify_book(self, book_image: str) -> BookInfo:
+    async def pass_book(self, book_image: str) -> BookInfo:
         response = await self.openai_client.beta.chat.completions.parse(
             model="gpt-4o-mini",
             messages=[

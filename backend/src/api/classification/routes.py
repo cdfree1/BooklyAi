@@ -14,5 +14,5 @@ classification_router: APIRouter = APIRouter(prefix="/classification", tags=["cl
 @classification_router.post("/classify-book", response_model=ClassificationClassifyBookOutput)
 async def classify_book(input: ClassificationClassifyBookInput, request: Request) -> ClassificationClassifyBookOutput:
     classifier_module: ClassifierModule = request.app.state.classifier_module
-    response_model: ClassificationClassifyBookOutput = await classifier_module.classify_book(book_image=input.image_path)
+    response_model: ClassificationClassifyBookOutput = await classifier_module.pass_book(book_image=input.image_path)
     return response_model
